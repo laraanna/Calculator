@@ -13,3 +13,6 @@ yarn start
 ```
 
 ## Preview
+
+![screen shot 2018-02-04 at 5 40 44 pm](https://user-images.githubusercontent.com/22427224/35779788-1a5db034-09d3-11e8-89d9-3bc3093c3d56.png)
+
