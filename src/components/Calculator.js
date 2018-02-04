@@ -1,8 +1,13 @@
 import React, {PureComponent} from 'react'
+import { connect } from 'react-redux';
+import addElement from '../actions/addElement'
 import {BUTTONS} from '../constants'
 import './Calculator.css'
 
 class Calculator extends PureComponent {
+  addElement(element){
+    this.props.addElement(element)
+  }
   render(){
     return(
       <div className="Calculator">
@@ -11,8 +16,8 @@ class Calculator extends PureComponent {
           <input type="text"  />
         </div>
         <div className="ButtonsContainer">
-        {BUTTONS.map((button, key) =>
-          <button className="Buttons" key={key}>{button}</button>
+        {BUTTONS.map((element, key) =>
+          <button className="Buttons" key={key} onClick={() => this.addElement(element)}>{element}</button>
         )}
         </div>
       </div>
@@ -21,4 +26,7 @@ class Calculator extends PureComponent {
 
 }
 
-export default Calculator
+const mapStateToProps = ({ buttons }) => ({ buttons })
+const mapDispatchToProps = {addElement: addElement}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Calculator)
