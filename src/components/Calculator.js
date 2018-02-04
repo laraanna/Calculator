@@ -22,7 +22,6 @@ class Calculator extends PureComponent {
     const { value } = this.props.buttons;
     return(
       <div className="Calculator">
-        <h1> Calculator </h1>
         <div className="Value">
           <input type="text" value={value}  />
         </div>
@@ -30,11 +29,11 @@ class Calculator extends PureComponent {
         {BUTTONS.map((element, key) => {
           if(element === "C"){
             return(
-              <button className="Buttons" key={key} onClick={() => this.clearElement()}>{element}</button>
+              <button className="Buttons Clear" key={key} onClick={() => this.clearElement()}>{element}</button>
             )
           } else if(element === "="){
             return(
-              <button className="Buttons" key={key} onClick={() => this.equal(value)}>{element}</button>
+              <button className="Buttons Equal" key={key} onClick={() => this.equal(value)}>{element}</button>
             )
           } else {
             return(
