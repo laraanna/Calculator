@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react'
 import { connect } from 'react-redux';
 import addElement from '../actions/addElement'
 import clearElement from '../actions/clearElement'
+import equal from '../actions/equal'
 import {BUTTONS} from '../constants'
 import './Calculator.css'
 
@@ -12,6 +13,10 @@ class Calculator extends PureComponent {
 
   clearElement(){
     this.props.clearElement()
+  }
+
+  equal(value){
+    this.props.equal(value)
   }
   render(){
     const { value } = this.props.buttons;
@@ -25,7 +30,11 @@ class Calculator extends PureComponent {
         {BUTTONS.map((element, key) => {
           if(element === "C"){
             return(
-              <button className="Buttons" key={key} onClick={() => this.clearElement(element)}>{element}</button>
+              <button className="Buttons" key={key} onClick={() => this.clearElement()}>{element}</button>
+            )
+          } else if(element === "="){
+            return(
+              <button className="Buttons" key={key} onClick={() => this.equal(value)}>{element}</button>
             )
           } else {
             return(
@@ -41,6 +50,6 @@ class Calculator extends PureComponent {
 }
 
 const mapStateToProps = ({ buttons }) => ({ buttons })
-const mapDispatchToProps = {addElement: addElement, clearElement: clearElement}
+const mapDispatchToProps = {addElement: addElement, clearElement: clearElement, equal: equal}
 
 export default connect(mapStateToProps,mapDispatchToProps)(Calculator)
