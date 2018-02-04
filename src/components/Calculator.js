@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import {BUTTONS} from '../constants'
+import './Calculator.css'
 
 class Calculator extends PureComponent {
   render(){
@@ -13,7 +14,6 @@ class Calculator extends PureComponent {
         {BUTTONS.map((button, key) =>
           <button className="Buttons" key={key}>{button}</button>
         )}
-
         </div>
       </div>
     )

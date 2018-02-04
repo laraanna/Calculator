@@ -1,0 +1,18 @@
+.Calculator {
+  margin: 0 auto;
+  width: 25%; }
+  .Calculator .Value {
+    display: block; }
+    .Calculator .Value input {
+      width: 100%;
+      height: 100px; }
+  .Calculator .ButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .Calculator .ButtonsContainer .Buttons {
+      width: 25%;
+      height: 60px;
+      font-size: 18px; }
+    .Calculator .ButtonsContainer .Buttons:last-of-type {
+      width: 100%; }
