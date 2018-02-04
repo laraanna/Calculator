@@ -9,11 +9,12 @@ class Calculator extends PureComponent {
     this.props.addElement(element)
   }
   render(){
+    const { value } = this.props.buttons;
     return(
       <div className="Calculator">
         <h1> Calculator </h1>
         <div className="Value">
-          <input type="text"  />
+          <input type="text" value={value}  />
         </div>
         <div className="ButtonsContainer">
         {BUTTONS.map((element, key) =>
