@@ -1,6 +1,6 @@
 .Calculator {
   margin: 0 auto;
-  width: 25%; }
+  width: 18%; }
   .Calculator .Value {
     display: block; }
     .Calculator .Value input {
@@ -8,14 +8,28 @@
       height: 100px;
       font-size: 28px;
       text-align: right;
-      padding: 5%; }
+      padding: 5%;
+      background-color: #9aabb9;
+      border: 1px solid #ffffff;
+      box-shadow: 5px 9px #d0d0d0; }
   .Calculator .ButtonsContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; }
     .Calculator .ButtonsContainer .Buttons {
+      border: 1px solid #ffffff;
+      box-shadow: 5px 9px #d0d0d0;
       width: 25%;
       height: 60px;
-      font-size: 18px; }
-    .Calculator .ButtonsContainer .Buttons:last-of-type {
-      width: 100%; }
+      font-size: 18px;
+      background-color: #d0d0d0; }
+    .Calculator .ButtonsContainer .Buttons:nth-child(15), .Calculator .ButtonsContainer .Buttons:nth-child(4n):not(:nth-child(16)) {
+      background-color: #e8c67d; }
+    .Calculator .ButtonsContainer .Buttons:nth-child(13) {
+      width: 50%; }
+    .Calculator .ButtonsContainer .Equal {
+      background-color: #c4d5dd; }
+    .Calculator .ButtonsContainer .Clear {
+      background-color: #ef946c; }
+    .Calculator .ButtonsContainer .Buttons:nth-child(16) {
+      width: 75%; }

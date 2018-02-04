@@ -1,6 +1,6 @@
 .Calculator
   margin: 0 auto
-  width: 25%
+  width: 18%
   .Value
     display: block
     input
@@ -9,13 +9,27 @@
       font-size: 28px
       text-align: right
       padding: 5%
+      background-color: #9aabb9
+      border: 1px solid #ffffff
+      box-shadow: 5px 9px #d0d0d0
   .ButtonsContainer
     display: flex
     flex-direction: row
     flex-wrap: wrap
     .Buttons
+      border: 1px solid #ffffff
+      box-shadow: 5px 9px #d0d0d0
       width: 25%
       height: 60px
       font-size: 18px
-    .Buttons:last-of-type
-      width: 100%
+      background-color: #d0d0d0
+    .Buttons:nth-child(15), .Buttons:nth-child(4n):not(:nth-child(16))
+      background-color: #e8c67d
+    .Buttons:nth-child(13)
+      width: 50%
+    .Equal
+      background-color: #c4d5dd
+    .Clear
+      background-color: #ef946c
+    .Buttons:nth-child(16)
+      width: 75%
